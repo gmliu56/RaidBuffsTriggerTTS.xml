@@ -5,6 +5,8 @@ Supports English/Japanese/Chinese client language
 
 Japanese callout is selected by default, if you would like to use callout in other languages, please go into each trigger to select (and only one action to be selected)
 
+*Update: you can now download the EN file, which has English TTS selected by default
+
 Note:
 <ul>
 <li>For Buffs on self, it will only call out when the user <b>actually GAINS</b> the buff on themselves.</li>
