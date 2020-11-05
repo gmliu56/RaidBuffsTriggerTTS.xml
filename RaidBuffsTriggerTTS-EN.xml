@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="799cd9f9-037e-4767-a2e8-7ff4a04479d6" Name="Raid Buffs Trigger TTS EN" Enabled="true">
+  <ExportedFolder Id="75b1114c-c8b9-4495-8092-dc7c6a580516" Name="Raid Buffs Trigger TTS EN" Enabled="true">
     <Folders>
-      <Folder Id="2956572c-676d-47be-a593-51445e38de7f" Name="Debuff on boss" Enabled="true">
+      <Folder Id="2aeabfb1-f5f2-4d9d-98cb-bc7dc179703e" Name="Debuff on boss" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="Chain Stratagem 連環計" Id="935f298e-4ec9-42f2-bbd8-c8c64190d9f5" RegularExpression="^.{14} 15:.{8}:(?&lt;_ffxivparty&gt;[^:]+?):1D0C:">
+          <Trigger Enabled="true" Name="Chain Stratagem 連環計" Id="80c75665-398e-4e22-a90e-e790209ac806" RegularExpression="^.{14} 15:.{8}:(?&lt;party&gt;[^:]+?):1D0C:">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="連環計" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -20,10 +20,19 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Trick Attack | だまし討ち | 背刺" Id="6d792e78-1121-4226-b60a-cdf11921dcd4" RegularExpression="^.{14} 15:.{8}:(?&lt;_ffxivparty&gt;[^:]+?):8D2:">
+          <Trigger Enabled="true" Name="Trick Attack | だまし討ち | 背刺" Id="8f7d9eff-7912-481f-8ae1-438d1b904a7e" RegularExpression="^.{14} 15:.{8}:(?&lt;party&gt;[^:]+?):8D2:">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="トリックアタック" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -42,15 +51,24 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="0941122a-f1b2-47c3-b199-6fbe36787966" Name="Buffs on self" Enabled="true">
+      <Folder Id="adabab8c-0548-45d4-b5ba-0baff3020a79" Name="Buffs on self" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="Embolden | エンボルデン | 鼓励" Id="0636d16f-0a93-4abb-9cfb-c4a6c3a6739a" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Embolden|エンボルデン|鼓励).*\(5\)">
+          <Trigger Enabled="true" Name="Embolden | エンボルデン | 鼓励" Id="de0fb805-1218-455b-b5c8-6bcd2e5259cf" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Embolden|エンボルデン|鼓励).*\(5\)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="エンボルデン" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -70,7 +88,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Battle Litany | バトルリタニー | 战斗连祷" Id="e61900be-8929-4fe3-9ab1-52a45c50639f" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Battle Litany|バトルリタニー|战斗连祷)">
+          <Trigger Enabled="true" Name="Battle Litany | バトルリタニー | 战斗连祷" Id="01bd2e64-09f0-48ae-925e-9073e83b0f72" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Battle Litany|バトルリタニー|战斗连祷)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="バトルリタニー" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -90,7 +108,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Battle Voice | バトルボイス | 战斗之声" Id="18ea8f82-e185-4b79-a6f3-1ea7825d32e1" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Battle Voice|バトルボイス|战斗之声)">
+          <Trigger Enabled="true" Name="Battle Voice | バトルボイス | 战斗之声" Id="7d1a0930-a8b9-4295-ab63-e0658c05b713" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Battle Voice|バトルボイス|战斗之声)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="バトルボイス" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -110,7 +128,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Devotion | エギの加護 | 灵护" Id="0bdba5f7-5869-4d9b-9c75-2f923d397342" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Devotion|エギの加護|灵护)">
+          <Trigger Enabled="true" Name="Devotion | エギの加護 | 灵护" Id="4389a844-cda7-41e4-ae7e-8e38c1cdc99f" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Devotion|エギの加護|灵护)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="デヴォション" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -134,7 +152,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Technical Finish | テクニカルフィニッシュ | 技巧舞步" Id="718f3e1e-e65c-42d4-a207-cbd91870a25d" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Technical Finish|テクニカルフィニッシュ|技巧舞步结束)">
+          <Trigger Enabled="true" Name="Technical Finish | テクニカルフィニッシュ | 技巧舞步" Id="3eeaf7a3-a2cc-4613-b243-95b7593c1f82" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Technical Finish|テクニカルフィニッシュ|技巧舞步结束)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="テクニカルフィニッシュ" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -154,7 +172,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Divination | ディヴィネーション | 占卜" Id="4dbfc39a-9f19-4a85-b6ce-b238ce9dc90c" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Divination|ディヴィネーション|占卜)">
+          <Trigger Enabled="true" Name="Divination | ディヴィネーション | 占卜" Id="0d4db678-f6b2-481a-ac12-19f571284017" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Divination|ディヴィネーション|占卜)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="ディヴィネーション" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -174,7 +192,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Brotherhood | 桃園結義 | 义结金兰" Id="85e66c41-66d4-4ceb-8b99-4b7b19867f3a" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Brotherhood|桃園結義|义结金兰)">
+          <Trigger Enabled="true" Name="Brotherhood | 桃園結義 | 义结金兰" Id="04c4b595-9c4b-4519-863c-d59efd2616e5" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Brotherhood|桃園結義|义结金兰)">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="桃園" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -194,7 +212,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="AST Play Cards for Melee" Id="9cf281f7-6b54-4fd9-80a3-7e7642deeb2d" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (The Balance|The Arrow|The Spear|アーゼマの均衡|オシュオンの矢|ハルオーネの槍|太阳神之衡|放浪神之箭|战争神之枪) ([^Drawn])">
+          <Trigger Enabled="false" Name="AST Play Cards for Melee" Id="2d08cc0a-1e2e-4158-bd45-3728a5bbf097" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (The Balance|The Arrow|The Spear|アーゼマの均衡|オシュオンの矢|ハルオーネの槍|太阳神之衡|放浪神之箭|战争神之枪) ([^Drawn])">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="カード" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -214,7 +232,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="AST Minor Arcana" Id="b332f032-b0e7-482f-87bc-c711180b954a" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Lord Of Crowns|Lady Of Crowns|クラウンロード|クラウンレディ|王冠之领主|王冠之贵妇)">
+          <Trigger Enabled="false" Name="AST Minor Arcana" Id="96202a9c-e44e-4a73-8a48-cdb2f1a19bc3" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (Lord Of Crowns|Lady Of Crowns|クラウンロード|クラウンレディ|王冠之领主|王冠之贵妇)">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="マイナーアルカナ" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -234,7 +252,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="AST Play Cards for Ranged" Id="85e6fb0a-711c-49bb-ae6a-75b22a080bf9" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (The Bole|The Ewer|The Spire|世界樹の幹|サリャクの水瓶|ビエルゴの塔|世界树之干|河流神之瓶|建筑神之塔) ([^Drawn])">
+          <Trigger Enabled="false" Name="AST Play Cards for Ranged" Id="31e35fa3-af6d-40c7-9cd7-0ca1821edf4a" RegularExpression="^.{14} 1A:.{8}:(?&lt;self&gt;.+?) gains the effect of (The Bole|The Ewer|The Spire|世界樹の幹|サリャクの水瓶|ビエルゴの塔|世界树之干|河流神之瓶|建筑神之塔) ([^Drawn])">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="カード" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -256,10 +274,10 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="66094389-4880-475f-8d6e-363d1b44f381" Name="Tank Invulnerbilities" Enabled="true">
+      <Folder Id="62da23c8-99c1-4387-9fbe-4d2355d3ec44" Name="Tank Invulnerbilities" Enabled="false">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="Superbolide (GNB) ボーライド" Id="9d90a33b-aeec-41db-9672-7fe912a36ad0" RegularExpression="^.{14} 15:.{8}:(?&lt;_ffxivparty&gt;[^:]+?):3F18:">
+          <Trigger Enabled="true" Name="Superbolide (GNB) ボーライド" Id="7c6bf117-3d98-4b47-9cb2-759b2cf39d57" RegularExpression="^.{14} 15:.{8}:(?&lt;party&gt;[^:]+?):3F18:">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="スーパーボーライド" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -278,10 +296,14 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Living Dead (DRK) リビングデッド" Id="d408e569-0750-4b05-b119-b5ed96b8ef15" RegularExpression="^.{14} 15:.{8}:(?&lt;_ffxivparty&gt;[^:]+?):E36:">
+          <Trigger Enabled="true" Name="Living Dead (DRK) リビングデッド" Id="99294e43-a567-4359-aefb-c5e6c71d2294" RegularExpression="^.{14} 15:.{8}:(?&lt;party&gt;[^:]+?):E36:">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="リビングデッド" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -296,10 +318,14 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Holmgang (WAR) ホルムギャング" Id="b20b006b-b97e-47fa-8785-314d0e82e9a1" RegularExpression="^.{14} 15:.{8}:(?&lt;_ffxivparty&gt;[^:]+?):2B:">
+          <Trigger Enabled="true" Name="Holmgang (WAR) ホルムギャング" Id="0c6d2747-cdd2-4f59-9dab-c6ae66f6910f" RegularExpression="^.{14} 15:.{8}:(?&lt;party&gt;[^:]+?):2B:">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="ホルムギャング" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -314,10 +340,14 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Hallowed Ground (PLD) インビンシブル" Id="2594668f-0c2c-4bbc-add0-c4a82ce2a9e1" RegularExpression="^.{14} 15:.{8}:(?&lt;_ffxivparty&gt;[^:]+?):1E:">
+          <Trigger Enabled="true" Name="Hallowed Ground (PLD) インビンシブル" Id="99aee73c-f387-4b17-8726-9749eec10c51" RegularExpression="^.{14} 15:.{8}:(?&lt;party&gt;[^:]+?):1E:">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="ハロードグランド" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -336,15 +366,19 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="f07fee19-18df-4c5a-898c-f949aa9db946" Name="Healer Utilities" Enabled="true">
+      <Folder Id="7199185b-8b7f-42ee-8e5e-6f13cc9a6140" Name="Healer Utilities" Enabled="false">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="SCH Aldoquium Critical Hit 鼓舞激励の策" Id="97752318-d9b8-44ca-a269-5a3975c0144c" RegularExpression="^.{14} 1A:.{8}:.* gains the effect of (Catalyze|激励) from (?&lt;_ffxivparty&gt;.+?)">
+          <Trigger Enabled="true" Name="SCH Aldoquium Critical Hit 鼓舞激励の策" Id="23946afe-08b5-43c7-a9c5-64982770f307" RegularExpression="^.{14} 1A:.{8}:.* gains the effect of (Catalyze|激励) from (?&lt;party&gt;[^:]+?)">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="激励" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -359,19 +393,25 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${party}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="false" Name="请在每项trigger里面选择tts播报语言" Id="59e9cd03-3cfb-4da1-aa00-d07f98b515d1" RegularExpression="">
+      <Trigger Enabled="false" Name="请在每项trigger里面选择tts播报语言" Id="f8ece406-1f87-4910-aabf-590ff31a1f94" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="false" Name="Please select your desired callout language inside each trigger" Id="ec5a21fa-77ed-42cd-af91-4a8de635160a" RegularExpression="">
+      <Trigger Enabled="false" Name="Please select your desired callout language inside each trigger" Id="8a3de158-66e3-4628-85f3-b31898576b9e" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
