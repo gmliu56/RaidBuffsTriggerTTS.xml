@@ -28,3 +28,10 @@ TTSアクションの言語はデフォルトで日本語を選ばれていま�
 
 默认选择日文作为TTS的播报语言，若想更改播报语言请在每一个trigger里面选择action（请只选择一个）
 *可下载CN文件，默认选择中文作为播报语言
+
+
+Preview:
+
+<picture>
+  <img src="https://github.com/N1kken86/RaidBuffsTriggerTTS.xml/blob/main/Sample.PNG">
+  </picture>
