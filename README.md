@@ -1,4 +1,5 @@
 # RaidBuffsTriggerTTS.xml
+(Not updating at the moment, may not be compatible with the current game version)
 A Triggernometry plug-in that broadcasts raid buffs, tank invuln to user when they pop in Final Fantasy XIV.
 
 Supports English/Japanese/Chinese client language
